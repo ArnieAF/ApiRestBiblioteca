@@ -265,7 +265,3 @@ El proyecto centraliza el manejo de excepciones en `GlobalExceptionHandler`, dev
 - `spring.jpa.open-in-view` está habilitado por defecto (comportamiento estándar de Spring Boot), lo cual puede generar consultas adicionales durante el renderizado de la vista/respuesta. Considerar deshabilitarlo explícitamente en producción.
 
 ---
-
-## 👤 Autor
-
-Proyecto desarrollado por **Arnie Adriano** como práctica del curso de Spring Boot / APIs REST en Platzi.
