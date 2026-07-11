@@ -1,9 +1,18 @@
 package com.api.api_biblioteca.domain;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class Author {
 
     private int autorId;
+
+    @NotBlank(message = "El nombre del autor es obligatorio")
+    @Size(min = 2, max = 100, message = "El nombre debe tener entre 2 y 100 caracteres")
     private String name;
+
+    @NotBlank(message = "La nacionalidad es obligatoria")
+    @Size(min = 2, max = 50, message = "La nacionalidad debe tener entre 2 y 50 caracteres")
     private String nacionality;
 
 
