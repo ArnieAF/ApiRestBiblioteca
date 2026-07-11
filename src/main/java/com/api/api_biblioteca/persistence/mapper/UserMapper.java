@@ -16,7 +16,9 @@ public interface UserMapper {
             @Mapping(source = "idUsuario",target = "userId"),
             @Mapping(source = "nombre",target = "name"),
             @Mapping(source = "fechaRegistro",target = "registerDate"),
-            @Mapping(source = "email",target = "email")
+            @Mapping(source = "email",target = "email"),
+            @Mapping(source = "password",target = "password"),
+            @Mapping(source = "role",target = "role")
     })
     User toUser(Usuario usuario);
     List<User>toUsers(List<Usuario>usuarios);
