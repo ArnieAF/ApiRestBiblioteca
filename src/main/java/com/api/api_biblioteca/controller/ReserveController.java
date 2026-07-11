@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -126,7 +127,7 @@ public class ReserveController {
     @ApiResponse(responseCode = "201", description = "Reservation successfully created")
     public ResponseEntity<Reservation> save(
             @Parameter(description = "The reservation object to save")
-            @RequestBody Reservation reservation) {
+            @Valid @RequestBody Reservation reservation) {
         return new ResponseEntity<>(reserveService.save(reservation), HttpStatus.CREATED);
     }
 

@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -109,7 +110,7 @@ public class BookController {
     @PostMapping("/save")
     @Operation(summary = "Save a new book")
     @ApiResponse(responseCode = "201", description = "Book successfully created")
-    public ResponseEntity<Book> save(@RequestBody Book book) {
+    public ResponseEntity<Book> save(@Valid @RequestBody Book book) {
         Book savedBook = bookService.save(book);
         return new ResponseEntity<>(savedBook, HttpStatus.CREATED);
     }
