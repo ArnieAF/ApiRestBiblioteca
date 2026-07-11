@@ -39,4 +39,16 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleGeneralException(Exception ex) {
         return new ResponseEntity<>("Error inesperado: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    // Maneja errores de autenticación (credenciales inválidas)
+    @ExceptionHandler(org.springframework.security.core.AuthenticationException.class)
+    public ResponseEntity<String> handleAuthenticationException(org.springframework.security.core.AuthenticationException ex) {
+        return new ResponseEntity<>("Credenciales inválidas", HttpStatus.UNAUTHORIZED);
+    }
+
+    // Maneja errores de autorización (sin permisos suficientes)
+    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
+    public ResponseEntity<String> handleAccessDeniedException(org.springframework.security.access.AccessDeniedException ex) {
+        return new ResponseEntity<>("No tenés permisos para realizar esta acción", HttpStatus.FORBIDDEN);
+    }
 }

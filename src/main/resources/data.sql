@@ -6,9 +6,9 @@ INSERT INTO Autor (nombre, nacionalidad) VALUES ('Mario Vargas Llosa', 'Peruana'
 INSERT INTO Autor (nombre, nacionalidad) VALUES ('J.K. Rowling', 'Britanica');
 
 -- USUARIOS
-INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Arnie Adriano', 'arnie@example.com', 'password123', 'ADMIN', '2026-01-10T09:00:00');
-INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Ana Torres', 'ana@example.com', 'password123', 'USER', '2026-02-15T10:30:00');
-INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Luis Fernández', 'luis@example.com', 'password123', 'USER', '2026-03-20T14:00:00');
+INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Arnie Adriano', 'arnie@example.com', '$2a$10$EblZqNptyYvcLm/VunkFeuJ6EG4V4KwlHFZWQF4pXpGEVw2sImi5W', 'ADMIN', '2026-01-10T09:00:00');
+INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Ana Torres', 'ana@example.com', '$2a$10$EblZqNptyYvcLm/VunkFeuJ6EG4V4KwlHFZWQF4pXpGEVw2sImi5W', 'USER', '2026-02-15T10:30:00');
+INSERT INTO Usuario (nombre, email, password, role, fecha_registro) VALUES ('Luis Fernández', 'luis@example.com', '$2a$10$EblZqNptyYvcLm/VunkFeuJ6EG4V4KwlHFZWQF4pXpGEVw2sImi5W', 'USER', '2026-03-20T14:00:00');
 -- LIBROS
 INSERT INTO Libro (titulo, genero, fecha_publicacion, disponible, id_autor) VALUES ('Cien años de soledad', 'FICTION', '1967-05-30T00:00:00', 1, 1);
 INSERT INTO Libro (titulo, genero, fecha_publicacion, disponible, id_autor) VALUES ('El amor en los tiempos del cólera', 'ROMANCE', '1985-01-01T00:00:00', 1, 1);
